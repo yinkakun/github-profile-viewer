@@ -1,5 +1,5 @@
 const app = document.querySelector('#app');
-const GITHUB_ACCESS_TOKEN = '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';
+const GITHUB_ACCESS_TOKEN = process.env.GITHUB_ACCESS_TOKEN;
 let userData = null;
 
 const inputPageMarkup = /*html*/ `
@@ -110,7 +110,7 @@ const renderInputPage = () => {
       .then((profile) => {
         if (profile.errors) {
           flashMessage.classList.add('input-page-flash--error');
-
+          console.log(profile);
           flashMessage.textContent = `${username} doesn't appear to be on GitHub at all.`;
         } else {
           userData = profile.data;

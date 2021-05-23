@@ -1,0 +1,11 @@
+dist
+node_modules
+.cache
+*.log
+.DS_Store
+.env
+.env.local
+yarn-debug.log*
+yarn-error.log*
+yarn.lock*
+package-lock.json
