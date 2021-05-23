@@ -1,0 +1,219 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #fff;
+  color: #24292e;
+  line-height: 1.5;
+  height: 100%;
+}
+
+#app {
+  height: 100%;
+  padding: 1rem;
+}
+
+.input-page {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-page main {
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 100%;
+  max-width: 544px;
+}
+
+.input-page__heading {
+  text-align: center;
+  font-size: 1.65rem;
+  font-weight: 400;
+}
+
+@media (min-width: 544px) {
+  .input-page__heading {
+    font-size: 2rem;
+  }
+}
+
+.input-page-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+.input-page-form__input {
+  background-color: #fafbfc;
+  font-size: 14px;
+  font-family: inherit;
+  text-align: start;
+  border: 1px solid #d1d5da;
+  border-radius: 3px;
+  outline: none;
+  box-shadow: inset 0 1px 2px rgb(27 31 35 / 8%);
+  color: #24292e;
+  padding: 0.4rem 0.75rem;
+}
+
+.input-page-form__input:focus {
+  border-color: #2188ff;
+  outline: none;
+  box-shadow: inset 0 1px 2px rgb(27 31 35 / 8%),
+    0 0 0 0.2em rgb(3 102 214 / 30%);
+}
+
+.input-page-form__button {
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: capitalize;
+  border: 1px solid rgba(27, 31, 35, 0.2);
+  border-radius: 0.25rem;
+  padding: 0.4rem 1.5rem;
+  margin-top: 0.5rem;
+  background-color: #28a745;
+  background-image: linear-gradient(-180deg, #34d058 0%, #28a745 90%);
+  color: #fff;
+  transition: 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+  transition-property: color, background-color, border-color;
+}
+
+.input-page-form__button:active,
+.input-page-form__button:focus {
+  border-color: rgba(27, 31, 35, 0.5);
+  box-shadow: 0 0 0 0.2em rgb(3 102 214 / 30%);
+}
+
+@media (min-width: 544px) {
+  .input-page-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .input-page-form__input {
+    flex-grow: 1;
+  }
+
+  .input-page-form__button {
+    margin-left: 1rem;
+    margin-top: 0;
+  }
+}
+
+.input-page-flash {
+  width: 100%;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 0.9rem;
+  color: #032f62;
+  background-color: #dbedff;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+}
+
+.visually-hidden {
+  opacity: 0;
+}
+
+.input-page-flash--error {
+  color: #86181d;
+  background-color: #ffdce0;
+  border-color: rgba(27, 31, 35, 0.15);
+}
+
+.input-page-footer {
+  font-size: 0.8rem;
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.input-page-footer > * {
+  margin: 0.4rem;
+}
