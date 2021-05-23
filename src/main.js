@@ -1,5 +1,5 @@
-import renderInputPage from '/input-page.js';
-import renderProfilePage from './profile-page.js';
+import renderInputPage from './input-page';
+import renderProfilePage from './profile-page';
 
 const render = () => {
   const { hash } = window.location;
