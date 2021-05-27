@@ -1,8 +1,8 @@
-# github-profile-vanilla-js
+# github-profile-viewer
 
 Code Repo for the Buycoins Coding Challenge Solution.
 
-Github Profile Page With Github GraphQL API and Vanilla JS.
+Github Profile Viewer built With Vanilla JS and Github's GraphQL API. 
 
 ## Instructions
 
