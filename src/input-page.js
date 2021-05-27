@@ -61,7 +61,7 @@ const fetchProfile = async (githubUsername) => {
               }
             }
             email
-            avatarUrl(size: 10)
+            avatarUrl(size: 500)
             followers {
               totalCount
             }
