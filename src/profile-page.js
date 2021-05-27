@@ -30,6 +30,8 @@ const renderProfilePage = () => {
   menu.addEventListener('click', () => {
     menuItems.classList.toggle('visible');
   });
+
+  document.title = `${userData.user.login} (${userData.user.name} )`;
 };
 
 export default renderProfilePage;
